@@ -1,6 +1,6 @@
 using afBedSheet
 
-class IndexPage {
+const class IndexPage {
 	
 	Text render() {
 		html := """<html>
