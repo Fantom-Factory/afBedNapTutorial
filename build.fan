@@ -17,7 +17,10 @@ class Build : BuildPod {
 
 		depends = [
 			"sys 1.0", 
+			"concurrent 1.0", 
+			"web 1.0", 
 
+			"afConcurrent 1.0.6",
 			"afIoc 1.7.6",
 			"afBedSheet 1.3.14"
 		]
