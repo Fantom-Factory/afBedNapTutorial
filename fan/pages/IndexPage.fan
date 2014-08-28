@@ -3,7 +3,8 @@ using afBedSheet
 const class IndexPage {
 	
 	Text render() {
-		html := """<html>
+		html := """<!DOCTYPE html>
+		           <html>
 		           <head>
 		           </head>
 		           <body>
