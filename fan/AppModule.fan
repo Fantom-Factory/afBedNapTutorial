@@ -10,7 +10,13 @@ class AppModule {
 	
 	@Contribute { serviceType=Routes# }
 	static Void contributeRoutes(Configuration config) {
-		config.add(Route(`/`, IndexPage#render))
+		config.add(Route(`/`,		IndexPage#render))
+		config.add(Route(`/view/**`, ViewPage#render))
+	}
+	
+	@Contribute { serviceType=ValueEncoders# }
+	static Void contributeValueEncoders(Configuration config) {
+		config[Visit#] = config.autobuild(VisitEncoder#)
 	}
 	
 	@Contribute { serviceType=ActorPools# }

@@ -1,5 +1,5 @@
-using afIoc
-using afBedSheet
+using afIoc::Inject
+using afBedSheet::Text
 using web::WebOutStream
 
 const class IndexPage {
@@ -20,12 +20,14 @@ const class IndexPage {
 		html.body
 		
 		html.h1.w("Bed Nap Tutorial").h1End
+		html.h2.w("Summary Page").h2End
 		
 		html.table
 		html.tr
 		html.th.w("Name").thEnd
 		html.th.w("Date").thEnd
 		html.th.w("Rating").thEnd
+		html.th.thEnd
 		html.trEnd
 		
 		visitService.all.each {
@@ -33,6 +35,9 @@ const class IndexPage {
 			html.td.w(it.name).tdEnd
 			html.td.w(it.date).tdEnd
 			html.td.w(it.rating).tdEnd
+			html.td
+			html.a(`/view/${it.id}`).w("view").aEnd
+			html.tdEnd
 			html.trEnd			
 		}
 

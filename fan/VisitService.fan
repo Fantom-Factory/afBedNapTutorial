@@ -1,18 +1,29 @@
-using afConcurrent
-using afIoc
+using concurrent::AtomicInt
+using afConcurrent::SynchronizedMap
+using afIoc::ActorPools
 
 const class VisitService {
-	private const SynchronizedList	visits
+	private const AtomicInt			lastId := AtomicInt()
+	private const SynchronizedMap	visits
 	
 	new make(ActorPools actorPools) { 
-		visits = SynchronizedList(actorPools["bednap.visits"]) { it.listType = Visit# }
+		visits = SynchronizedMap(actorPools["bednap.visits"]) { it.keyType = Int#; it.valType = Visit# }
 	}
 	
 	Visit[] all() {
-		visits.list
+		visits.vals
 	}
 
 	Void save(Visit visit) {
-		visits.add(visit)
+		if (visit.id == null) {
+			nextId := lastId.incrementAndGet
+			visit   = Visit(visit.name, visit.date, visit.rating, visit.comment, nextId) 
+		}
+
+		visits[visit.id] = visit
+	}
+	
+	Visit get(Int id) {
+		visits[id]
 	}
 }
