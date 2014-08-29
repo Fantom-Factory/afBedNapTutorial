@@ -23,10 +23,9 @@ const class ViewPage {
 		html.div.w("${visit.rating} / 5 stars").divEnd
 		
 		html.div
-		html.a(`/`).w("< Back").aEnd
+		html.a(`/`).w("&lt; Back").aEnd
 		html.divEnd
 		
-		html.tableEnd
 		html.bodyEnd		
 		html.htmlEnd
 
