@@ -14,13 +14,14 @@ const class VisitService {
 		visits.vals
 	}
 
-	Void save(Visit visit) {
+	Visit save(Visit visit) {
 		if (visit.id == null) {
 			nextId := lastId.incrementAndGet
 			visit   = Visit(visit.name, visit.date, visit.rating, visit.comment, nextId) 
 		}
 
 		visits[visit.id] = visit
+		return visit
 	}
 	
 	Visit get(Int id) {

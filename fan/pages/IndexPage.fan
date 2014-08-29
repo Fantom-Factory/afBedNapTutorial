@@ -32,13 +32,13 @@ const class IndexPage {
 		
 		visitService.all.each {
 			html.tr
-			html.td.w(it.name).tdEnd
-			html.td.w(it.date).tdEnd
-			html.td.w(it.rating).tdEnd
+			html.td("class='t-name'").w(it.name).tdEnd
+			html.td("class='t-date'").w(it.date).tdEnd
+			html.td("class='t-rate'").w(it.rating).tdEnd
 			html.td
-			html.a(`/view/${it.id}`).w("view").aEnd
+			html.a(`/view/${it.id}`, "class='t-view'").w("view").aEnd
 			html.tdEnd
-			html.trEnd			
+			html.trEnd
 		}
 
 		html.tableEnd

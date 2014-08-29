@@ -17,16 +17,15 @@ const class ViewPage {
 		html.h1.w("Bed Nap Tutorial").h1End
 		html.h2.w("Visit View Page").h2End
 		
-		html.div.w("${visit.name} said:").divEnd
-		html.div.w(visit.comment).divEnd
-		html.div.w("on ${visit.date}").divEnd
-		html.div.w("${visit.rating} / 5 stars").divEnd
+		html.div("class='t-name'").w("${visit.name} said:").divEnd
+		html.div("class='t-comment'").w(visit.comment).divEnd
+		html.div("class='t-date'").w("on ${visit.date}").divEnd
+		html.div("class='t-rate'").w("${visit.rating} / 5 stars").divEnd
 		
 		html.div
-		html.a(`/`).w("< Back").aEnd
+		html.a(`/`).w("&lt; Back").aEnd
 		html.divEnd
 		
-		html.tableEnd
 		html.bodyEnd		
 		html.htmlEnd
 
