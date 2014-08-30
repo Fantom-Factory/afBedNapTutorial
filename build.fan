@@ -18,7 +18,7 @@ class Build : BuildPod {
 		depends = [
 			"sys 1.0", 
 			"concurrent 1.0", 
-			"web 1.0", 
+			"web 1.0", // die!
 
 			// ---- Core ------------------------
 			"afConcurrent 1.0",
@@ -26,12 +26,13 @@ class Build : BuildPod {
 			
 			// ---- Web -------------------------
 			"afBedSheet 1.3",
+			"afEfan 1.4",
 			
 			// ---- Test ------------------------
 			"afBounce 1.0"
 		]
 
 		srcDirs = [`test/`, `fan/`, `fan/pages/`]
-		resDirs = [,]
+		resDirs = [`fan/pages/`]
 	}
 }

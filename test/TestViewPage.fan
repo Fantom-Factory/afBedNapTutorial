@@ -12,7 +12,7 @@ class TestViewPage : WebTest {
 		
 		// when
 		client.get(`/view/8`)
-		
+
 		// then
 		Element(".t-name"   ).verifyTextEq("Butcher said:")
 		Element(".t-comment").verifyTextEq("Sausages")

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bed Nap Index Page</title>
+</head>
+<body>
+	<h1>Bed Nap Tutorial</h1>
+	<h2>Summary Page</h2>
+
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Date</th>
+			<th>Rating</th>
+			<th></th>
+		</tr>
+		<% ctx.each { %>
+			<tr>
+				<td class="t-name"><%= it.name %></td>
+				<td class="t-date"><%= it.date %></td>
+				<td class="t-rate"><%= it.rating %></td>
+				<td><a href="/view/<%= it.id%>" class="t-view">view</a></td>
+			</tr>
+		<% } %>
+	</table>
+</body>
+</html>

@@ -1,11 +1,13 @@
 using concurrent
 using afIoc
 using afBedSheet
+using afEfan
 
 class AppModule {
 
 	static Void bind(ServiceBinder binder) {
 		binder.bind(VisitService#)
+		binder.bind(Efan#)
 	}
 	
 	@Contribute { serviceType=Routes# }

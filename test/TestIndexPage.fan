@@ -14,7 +14,7 @@ class TestIndexPage : WebTest {
 
 		// when
 		client.get(`/`)
-		
+
 		// then
 		Element(".t-name")[0].verifyTextEq("User 1")
 		Element(".t-date")[0].verifyTextEq("2000-01-01")

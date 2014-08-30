@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bed Nap View Page</title>
+</head>
+<body>
+	<h1>Bed Nap Tutorial</h1>
+	<h2>Visit View Page</h2>
+
+	<div class="t-name"><%= ctx.name %> said:</div>
+	<div class="t-comment"><%= ctx.comment %></div>
+	<div class="t-date">on <%= ctx.date %></div>
+	<div class="t-rate"><%= ctx.rating %> / 5 stars</div>
+	<div><a href="/">&lt; Back</a></div>
+</body>
+</html>
