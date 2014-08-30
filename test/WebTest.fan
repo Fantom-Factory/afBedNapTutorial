@@ -1,5 +1,6 @@
 using afIoc
-using afBounce
+using afBounce::BedServer
+using afBounce::BedClient
 
 abstract class WebTest : Test {
 
@@ -18,7 +19,6 @@ abstract class WebTest : Test {
 
 
 class TestModule {
-
 	@Contribute { serviceType=RegistryStartup# }
 	static Void contributeRegistryStartup(Configuration config) {
 		config.remove("bednap.createSampleData")
