@@ -4,10 +4,9 @@ using afEfan::Efan
 using afEfan::EfanTemplate
 
 const class ViewPage {
-	@Inject private const Efan			efan
-			private const EfanTemplate	template 
-			private const EfanTemplate	layout
-	
+	private const EfanTemplate	template 
+	private const EfanTemplate	layout
+
 	new make(Efan efan, |This|in) {
 		in(this) 
 		templateFile := Pod.of(this).file(`/fan/pages/ViewPage.efan`) 
