@@ -7,8 +7,7 @@ const class ViewPage {
 	private const EfanTemplate	template 
 	private const EfanTemplate	layout
 
-	new make(Efan efan, |This|in) {
-		in(this) 
+	new make(Efan efan) {
 		templateFile := Pod.of(this).file(`/fan/pages/ViewPage.efan`) 
 		template = efan.compileFromFile(templateFile, ViewPageCtx#)
 
