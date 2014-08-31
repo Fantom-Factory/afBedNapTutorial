@@ -26,13 +26,15 @@ class Build : BuildPod {
 			
 			// ---- Web -------------------------
 			"afBedSheet 1.3",
+			"afEfanXtra 1.1",
+			
 			"afEfan 1.4",
 			
 			// ---- Test ------------------------
 			"afBounce 1.0"
 		]
 
-		srcDirs = [`test/`, `fan/`, `fan/pages/`]
-		resDirs = [`fan/pages/`]
+		srcDirs = [`test/`, `fan/`, `fan/pages/`, `fan/components/`]
+		resDirs = [`fan/pages/`, `fan/components/`]
 	}
 }
