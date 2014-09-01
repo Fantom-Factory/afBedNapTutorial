@@ -5,5 +5,5 @@
 	<div class="t-comment"><%= visit.comment %></div>
 	<div class="t-date">on <%= visit.date %></div>
 	<div class="t-rate"><%= visit.rating %> / 5 stars</div>
-	<div><a href="/">&lt; Back</a></div>
+	<div><a href="<%= pages[IndexPage#].pageUrl %>">&lt; Back</a></div>
 <% } %>

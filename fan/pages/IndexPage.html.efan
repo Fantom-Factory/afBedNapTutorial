@@ -13,7 +13,7 @@
 				<td class="t-name"><%= it.name %></td>
 				<td class="t-date"><%= it.date %></td>
 				<td class="t-rate"><%= it.rating %></td>
-				<td><a href="/view/<%= it.id%>" class="t-view">view</a></td>
+				<td><a href="<%= viewUrl(it) %>" class="t-view">view</a></td>
 			</tr>
 		<% } %>
 	</table>
