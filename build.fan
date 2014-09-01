@@ -27,8 +27,6 @@ class Build : BuildPod {
 			"afBedSheet 1.3",
 			"afEfanXtra 1.1",
 			
-			"afEfan 1.4",
-			
 			// ---- Test ------------------------
 			"afBounce 1.0"
 		]
