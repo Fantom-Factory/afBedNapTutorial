@@ -8,18 +8,7 @@ class AppModule {
 	static Void bind(ServiceBinder binder) {
 		binder.bind(VisitService#)
 	}
-	
-	@Contribute { serviceType=Routes# }
-	static Void contributeRoutes(Configuration config) {
-		config.add(Route(`/`,		 PageRoutes#renderIndexPage))
-		config.add(Route(`/view/**`, PageRoutes#renderViewPage))
-	}
 
-	@Contribute { serviceType=EfanLibraries# }
-	static Void contributeEfanLibs(Configuration config) {
-		config["app"] = Pod.find("bednap")
-	}
-	
 	@Contribute { serviceType=ValueEncoders# }
 	static Void contributeValueEncoders(Configuration config) {
 		config[Visit#] = config.autobuild(VisitEncoder#)
