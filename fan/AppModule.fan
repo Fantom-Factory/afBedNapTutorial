@@ -1,19 +1,23 @@
 using concurrent
 using afIoc
 using afBedSheet
-using afEfan
+using afEfanXtra
 
 class AppModule {
 
 	static Void bind(ServiceBinder binder) {
 		binder.bind(VisitService#)
-		binder.bind(Efan#)
 	}
 	
 	@Contribute { serviceType=Routes# }
 	static Void contributeRoutes(Configuration config) {
-		config.add(Route(`/`,		IndexPage#render))
-		config.add(Route(`/view/**`, ViewPage#render))
+		config.add(Route(`/`,		 PageRoutes#renderIndexPage))
+		config.add(Route(`/view/**`, PageRoutes#renderViewPage))
+	}
+
+	@Contribute { serviceType=EfanLibraries# }
+	static Void contributeEfanLibs(Configuration config) {
+		config["app"] = Pod.find("bednap")
 	}
 	
 	@Contribute { serviceType=ValueEncoders# }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><%= ctx.title %></title>
+	<title><%= title %></title>
 </head>
 <body>
 	<h1>Bed Nap Tutorial</h1>

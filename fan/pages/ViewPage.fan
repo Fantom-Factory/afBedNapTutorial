@@ -1,32 +1,11 @@
-using afIoc::Inject
-using afBedSheet::Text
-using afEfan::Efan
-using afEfan::EfanTemplate
+using afEfanXtra::InitRender
+using afEfanXtra::EfanComponent
 
-const class ViewPage {
-	@Inject private const Efan			efan
-			private const EfanTemplate	template 
-			private const EfanTemplate	layout
+const mixin ViewPage : EfanComponent {
+	abstract Visit visit
 	
-	new make(Efan efan, |This|in) {
-		in(this) 
-		templateFile := Pod.of(this).file(`/fan/pages/ViewPage.efan`) 
-		template = efan.compileFromFile(templateFile, ViewPageCtx#)
-
-		layoutFile := Pod.of(this).file(`/fan/pages/Layout.efan`) 
-		layout   = efan.compileFromFile(layoutFile, Str#)
+	@InitRender
+	Void initRender(Visit visit) {
+		this.visit = visit
 	}
-	
-	Text render(Visit visit) {
-		ctx  := ViewPageCtx() { it.layout = this.layout; it.visit = visit }
-		html := template.render(ctx)
-		return Text.fromHtml(html)
-	}
-}
-
-class ViewPageCtx {
-	EfanTemplate	layout
-	Visit			visit
-	
-	new make(|This|in) { in(this) }
 }

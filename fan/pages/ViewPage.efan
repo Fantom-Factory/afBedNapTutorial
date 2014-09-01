@@ -1,9 +1,9 @@
-<%= ctx.layout.render("Bed Nap View Page") { %>
+<%= app.renderLayout("Bed Nap View Page") { %>
 	<h2>Visit View Page</h2>
 
-	<div class="t-name"><%= ctx.visit.name %> said:</div>
-	<div class="t-comment"><%= ctx.visit.comment %></div>
-	<div class="t-date">on <%= ctx.visit.date %></div>
-	<div class="t-rate"><%= ctx.visit.rating %> / 5 stars</div>
+	<div class="t-name"><%= visit.name %> said:</div>
+	<div class="t-comment"><%= visit.comment %></div>
+	<div class="t-date">on <%= visit.date %></div>
+	<div class="t-rate"><%= visit.rating %> / 5 stars</div>
 	<div><a href="/">&lt; Back</a></div>
 <% } %>

@@ -1,29 +1,10 @@
-using afIoc::Inject
-using afBedSheet::Text
-using afEfan::Efan
-using afEfan::EfanTemplate
+using afEfanXtra::EfanComponent
+using afEfanXtra::InitRender
 
-class Layout {
-	// ---- Boilerplate Code --------------------
+const mixin Layout : EfanComponent{	
+	abstract Str? title
 
-	private EfanTemplate	template 
-	
-	new make(Efan efan) {
-		templateFile := Pod.of(this).file(`/fan/components/Layout.efan`) 
-		template = efan.compileFromFile(templateFile, Layout#)
-	}
-	
-	Text render() {
-		html := template.render(this)
-		return Text.fromHtml(html)
-	}
-
-
-
-	// ---- Layout Specific Code ----------------
-	
-	Str? title
-
+	@InitRender
 	Void initRender(Str title) {
 		this.title = title
 	}

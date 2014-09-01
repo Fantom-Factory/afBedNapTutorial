@@ -1,4 +1,4 @@
-<%= ctx.layout.render("Bed Nap Index Page") { %>
+<%= app.renderLayout("Bed Nap Index Page") { %>
 	<h2>Summary Page</h2>
 
 	<table>
@@ -8,7 +8,7 @@
 			<th>Rating</th>
 			<th></th>
 		</tr>
-		<% ctx.visits.each { %>
+		<% visitService.all.each { %>
 			<tr>
 				<td class="t-name"><%= it.name %></td>
 				<td class="t-date"><%= it.date %></td>
