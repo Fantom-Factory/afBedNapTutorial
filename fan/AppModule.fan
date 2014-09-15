@@ -5,9 +5,9 @@ using afEfan
 
 class AppModule {
 
-	static Void bind(ServiceBinder binder) {
-		binder.bind(VisitService#)
-		binder.bind(Efan#)
+	static Void defineServices(ServiceDefinitions defs) {
+		defs.add(VisitService#)
+		defs.add(Efan#)
 	}
 	
 	@Contribute { serviceType=Routes# }
