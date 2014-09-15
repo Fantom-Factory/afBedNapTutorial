@@ -21,7 +21,7 @@ class Build : BuildPod {
 
 			// ---- Core ------------------------
 			"afConcurrent 1.0",
-			"afIoc 1.7",
+			"afIoc 2.0",
 			
 			// ---- Web -------------------------
 			"afBedSheet 1.3",
