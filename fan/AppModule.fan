@@ -5,8 +5,8 @@ using afEfanXtra
 
 class AppModule {
 
-	static Void bind(ServiceBinder binder) {
-		binder.bind(VisitService#)
+	static Void defineServices(ServiceDefinitions defs) {
+		defs.add(VisitService#)
 	}
 
 	@Contribute { serviceType=ValueEncoders# }
