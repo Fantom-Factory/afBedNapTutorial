@@ -16,19 +16,19 @@ class Build : BuildPod {
 		]
 
 		depends = [
-			"sys 1.0", 
+			"sys        1.0", 
 			"concurrent 1.0", 
 
 			// ---- Core ------------------------
-			"afConcurrent 1.0",
-			"afIoc 2.0",
-			
+			"afConcurrent 1.0.8  - 1.0",
+			"afIoc        2.0.10 - 2.0",
+
 			// ---- Web -------------------------
-			"afBedSheet 1.3",
-			"afEfanXtra 1.1",
-			
+			"afBedSheet   1.4.14 - 1.4",
+			"afEfanXtra   1.1.20 - 1.1",
+
 			// ---- Test ------------------------
-			"afBounce 1.0"
+			"afBounce     1.0.22 - 1.0"
 		]
 
 		srcDirs = [`test/`, `fan/`, `fan/pages/`, `fan/components/`]

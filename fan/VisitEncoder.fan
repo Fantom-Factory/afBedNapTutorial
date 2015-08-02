@@ -7,12 +7,12 @@ const class VisitEncoder : ValueEncoder {
 	
 	new make(|This|in) { in(this) }
 
-	override Str toClient(Obj value) {
+	override Str toClient(Obj? value) {
 		visit := (Visit) value
 		return visit.id.toStr
 	}
 
-	override Obj toValue(Str clientValue) {
+	override Obj? toValue(Str clientValue) {
 		id := clientValue.toInt
 		return visitService.get(id)
 	}
