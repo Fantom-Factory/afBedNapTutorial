@@ -21,18 +21,18 @@ class Build : BuildPod {
 			"web        1.0", 
 
 			// ---- Core ------------------------
-			"afConcurrent 1.0.8  - 1.0",
-			"afIoc        2.0.10 - 2.0",
+			"afConcurrent 1.0.14 - 1.0",
+			"afIoc        3.0.2  - 3.0",
 
 			// ---- Web -------------------------
-			"afBedSheet   1.4.14 - 1.4",
-			"afEfan       1.4.2  - 1.4",
+			"afBedSheet   1.5.2  - 1.5",
+			"afEfan       1.5.2  - 1.5",
 
 			// ---- Test ------------------------
-			"afBounce     1.0.22 - 1.0"
+			"afBounce     1.1.2  - 1.1"
 		]
 
-		srcDirs = [`test/`, `fan/`, `fan/pages/`]
+		srcDirs = [`fan/`, `fan/pages/`, `test/`]
 		resDirs = [`fan/pages/`]
 	}
 }

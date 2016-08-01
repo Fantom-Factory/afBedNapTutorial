@@ -1,12 +1,12 @@
 using afIoc::Inject
 using afBedSheet::Text
 using afEfan::Efan
-using afEfan::EfanTemplate
+using afEfan::EfanTemplateMeta
 
 const class IndexPage {
-	@Inject private const VisitService	visitService
-			private const EfanTemplate	template
-			private const EfanTemplate	layout
+	@Inject private const VisitService		visitService
+			private const EfanTemplateMeta	template
+			private const EfanTemplateMeta	layout
 	
 	new make(Efan efan, |This|in) {
 		in(this) 
@@ -25,8 +25,8 @@ const class IndexPage {
 }
 
 class IndexPageCtx {
-	EfanTemplate	layout
-	Visit[]			visits
+	EfanTemplateMeta	layout
+	Visit[]				visits
 	
 	new make(|This|in) { in(this) }
 }

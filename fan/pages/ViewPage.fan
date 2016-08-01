@@ -1,11 +1,11 @@
 using afIoc::Inject
 using afBedSheet::Text
 using afEfan::Efan
-using afEfan::EfanTemplate
+using afEfan::EfanTemplateMeta
 
 const class ViewPage {
-	private const EfanTemplate	template 
-	private const EfanTemplate	layout
+	private const EfanTemplateMeta	template 
+	private const EfanTemplateMeta	layout
 
 	new make(Efan efan) {
 		templateFile := Pod.of(this).file(`/fan/pages/ViewPage.efan`) 
@@ -23,8 +23,8 @@ const class ViewPage {
 }
 
 class ViewPageCtx {
-	EfanTemplate	layout
-	Visit			visit
+	EfanTemplateMeta	layout
+	Visit				visit
 	
 	new make(|This|in) { in(this) }
 }
