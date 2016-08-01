@@ -1,15 +1,14 @@
 using concurrent::AtomicInt
 using afConcurrent::SynchronizedMap
-using afIoc::ActorPools
+using afIoc
 
 const class VisitService {
+	@Inject { id="bednap.visits"; type=Int:Visit# }
+    private const SynchronizedMap	visits
 	private const AtomicInt			lastId := AtomicInt()
-	private const SynchronizedMap	visits
 	
-	new make(ActorPools actorPools) { 
-		visits = SynchronizedMap(actorPools["bednap.visits"]) { it.keyType = Int#; it.valType = Visit# }
-	}
-	
+	new make(|This| f) { f(this) }
+
 	Visit[] all() {
 		visits.vals
 	}
