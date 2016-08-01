@@ -1,12 +1,11 @@
-using afConcurrent
 using afIoc
+using afConcurrent
 
 const class VisitService {
+	@Inject { id="bednap.visits"; type=Visit[]# }
 	private const SynchronizedList	visits
-	
-	new make(ActorPools actorPools) { 
-		visits = SynchronizedList(actorPools["bednap.visits"]) { it.listType = Visit# }
-	}
+
+	new make(|This| f) { f(this) }
 	
 	Visit[] all() {
 		visits.list
