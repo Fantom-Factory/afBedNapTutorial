@@ -1,10 +1,10 @@
 using afIoc
 using afBedSheet
 
-class AppModule {
+const class AppModule {
 	
 	@Contribute { serviceType=Routes# }
-	static Void contributeRoutes(Configuration config) {
+	Void contributeRoutes(Configuration config) {
 		config.add(Route(`/`, IndexPage#render))
 	}
 }

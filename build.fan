@@ -18,8 +18,8 @@ class Build : BuildPod {
 		depends = [
 			"sys 1.0", 
 
-			"afIoc      2.0.10 - 2.0",
-			"afBedSheet 1.4.14 - 1.4"
+			"afIoc      3.0.2 - 3.0",
+			"afBedSheet 1.5.2 - 1.5"
 		]
 
 		srcDirs = [`fan/`, `fan/pages/`]
