@@ -1,7 +1,7 @@
-using afBedSheet::Main as BsMain
+using afBedSheet
 
 class Main {
 	Void main() {
-		BsMain().main("-proxy -env dev bednap 8069".split)
+		BedSheetBuilder("bednap").startWisp(8069, true, "dev")
 	}
 }
