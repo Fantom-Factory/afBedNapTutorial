@@ -1,3 +1,3 @@
 ## Bed Nap Tutorial
 
-This repository follows the [Bed Nap Tutorial](http://www.fantomfactory.org/articles/bnt01-my-first-bedapp) on [Fantom-Factory](http://www.fantomfactory.org/).
+This repository follows the [Bed Nap Tutorial](http://www.alienfactory.co.uk/articles/bnt05-testing-with-bounce) on [Alien-Factory](http://www.alienfactory.org/).

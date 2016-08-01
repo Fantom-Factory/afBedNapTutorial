@@ -8,7 +8,7 @@ abstract class WebTest : Test {
 	
 	override Void setup() {
 		server := BedServer(AppModule#).addModule(TestModule#).startup
-		server.injectIntoFields(this)
+		server.inject(this)
 		client = server.makeClient
 	}
 	
@@ -18,9 +18,8 @@ abstract class WebTest : Test {
 }
 
 
-class TestModule {
-	@Contribute { serviceType=RegistryStartup# }
-	static Void contributeRegistryStartup(Configuration config) {
+const class TestModule {
+	Void onRegistryStartup(Configuration config) {
 		config.remove("bednap.createSampleData")
 	}
 }
